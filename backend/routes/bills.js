@@ -14,9 +14,9 @@ router.post("/", async (req, res) => {
     const bill = new Bill(req.body);
     await bill.save();
     await Notification.create({
-  message: `New bill generated for ${bill.patientName}`,
-  type: "Billing"
-});
+      message: `New bill generated for ${bill.patientName}`,
+      type: "Billing"
+    });
     res.json({ message: "Bill created", bill });
   } catch (err) {
     res.status(400).json({ error: err.message });

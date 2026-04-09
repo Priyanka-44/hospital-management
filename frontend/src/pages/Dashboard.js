@@ -56,59 +56,59 @@ export default function Dashboard() {
       {/* Main Content */}
       <div className="flex-grow-1 p-4">
         <h4 className="mb-4">WELCOME TO DASHBOARD</h4>
-<div className="row g-4">
-  {/* Top row */}
- <div className="row g-4">
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-users fa-2x text-primary mb-2"></i>
-      <h6>Manage Users</h6>
-      <p>Total Users: 6</p>
-    </div>
-  </div>
+        <div className="row g-4">
+          {/* Top row */}
+          <div className="row g-4">
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-users fa-2x text-primary mb-2"></i>
+                <h6>Manage Users</h6>
+                <p>Total Users: 6</p>
+              </div>
+            </div>
 
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-user-md fa-2x text-success mb-2"></i>
-      <h6>Manage Doctors</h6>
-      <p>Total Doctors: 3</p>
-    </div>
-  </div>
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-user-md fa-2x text-success mb-2"></i>
+                <h6>Manage Doctors</h6>
+                <p>Total Doctors: 3</p>
+              </div>
+            </div>
 
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-calendar-check fa-2x text-warning mb-2"></i>
-      <h6>Appointments</h6>
-      <p>Total Appointments: 6</p>
-    </div>
-  </div>
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-calendar-check fa-2x text-warning mb-2"></i>
+                <h6>Appointments</h6>
+                <p>Total Appointments: 6</p>
+              </div>
+            </div>
 
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-hospital-user fa-2x text-info mb-2"></i>
-      <h6>Manage Patients</h6>
-      <p>Total Patients: 5</p>
-    </div>
-  </div>
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-hospital-user fa-2x text-info mb-2"></i>
+                <h6>Manage Patients</h6>
+                <p>Total Patients: 5</p>
+              </div>
+            </div>
 
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-question-circle fa-2x text-secondary mb-2"></i>
-      <h6>New Queries</h6>
-      <p>Total New Queries: 1</p>
-    </div>
-  </div>
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-question-circle fa-2x text-secondary mb-2"></i>
+                <h6>New Queries</h6>
+                <p>Total New Queries: 1</p>
+              </div>
+            </div>
 
-  <div className="col-md-4">
-    <div className="card shadow-sm text-center p-4">
-      <i className="fas fa-bed fa-2x text-danger mb-2"></i>
-      <h6>Rooms Allocated</h6>
-      <p>Total Rooms: 4</p>
-    </div>
-  </div>
-</div>
+            <div className="col-md-4">
+              <div className="card shadow-sm text-center p-4">
+                <i className="fas fa-bed fa-2x text-danger mb-2"></i>
+                <h6>Rooms Allocated</h6>
+                <p>Total Rooms: 4</p>
+              </div>
+            </div>
+          </div>
 
-</div>
+        </div>
 
 
         {/* Notifications */}

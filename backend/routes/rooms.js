@@ -14,9 +14,9 @@ router.post("/", async (req, res) => {
     const room = new Room(req.body);
     await room.save();
     await Notification.create({
-  message: `Room allocated to ${room.patientName}`,
-  type: "Room"
-});
+      message: `Room allocated to ${room.patientName}`,
+      type: "Room"
+    });
     res.json({ message: "Room allocated", room });
   } catch (err) {
     res.status(400).json({ error: err.message });

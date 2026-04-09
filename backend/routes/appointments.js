@@ -17,7 +17,6 @@ router.post("/", async (req, res) => {
     const appointment = new Appointment(req.body);
     await appointment.save();
 
-    // ✅ Save notification here
     await Notification.create({
       message: `New appointment booked by ${appointment.patientName}`,
       type: "Appointment"

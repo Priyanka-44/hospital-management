@@ -92,7 +92,7 @@ export default function Billing() {
       >
         <h4 className="text-center mb-4">HMS</h4>
         <ul className="nav flex-column">
-         <li className="nav-item">
+          <li className="nav-item">
             <a href="/dashboard" className="nav-link text-white active">
               <i className="fas fa-chart-line me-2"></i> Dashboard
             </a>

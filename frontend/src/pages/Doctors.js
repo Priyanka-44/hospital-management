@@ -39,10 +39,10 @@ export default function Doctors() {
     const name = prompt("Update name", d.name);
     const specialty = prompt("Update specialty", d.specialty);
     const contact = prompt("Update contact", d.contact);
-if (!name.trim() || !specialty.trim()) {
-  alert("Name and Specialty cannot be empty!");
-  return;
-}
+    if (!name.trim() || !specialty.trim()) {
+      alert("Name and Specialty cannot be empty!");
+      return;
+    }
 
     if (name && specialty) {
       axios
@@ -74,7 +74,7 @@ if (!name.trim() || !specialty.trim()) {
       >
         <h4 className="text-center mb-4">HMS</h4>
         <ul className="nav flex-column">
-         <li className="nav-item">
+          <li className="nav-item">
             <a href="/dashboard" className="nav-link text-white active">
               <i className="fas fa-chart-line me-2"></i> Dashboard
             </a>

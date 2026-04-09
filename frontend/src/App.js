@@ -22,7 +22,7 @@ function App() {
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/rooms" element={<RoomAllocation />} />
         <Route path="/billing" element={<Billing />} />
-     
+
 
 
         <Route path="/register-patient" element={<PatientRegistration />} />

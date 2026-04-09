@@ -1,7 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const serverless = require("serverless-http");
 require("dotenv").config();
+
 
 const authRoutes = require("./routes/auth");
 const patientRoutes = require("./routes/patient");
@@ -16,6 +18,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 app.use("/api/auth", authRoutes);
 app.use("/api/patients", patientRoutes);
 app.use("/api/doctors", doctorRoutes);
@@ -25,14 +28,27 @@ app.use("/api/bills", billsRoutes);
 app.use("/api/notifications", notificationsRoutes);
 
 
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log("✅ MongoDB Connected"))
-  .catch(err => console.error(err));
-
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
 app.get("/", (req, res) => {
-    res.send("✅ Hospital Management Backend is running.");
+  res.send("Hospital Management Backend is running.");
 });
+
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log(" MongoDB Connected");
+
+    const PORT = process.env.PORT || 5001;
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+
+  } catch (err) {
+    console.error(" MongoDB Connection Error:", err);
+  }
+}
+
+connectDB();
+
+// Vercel export
+module.exports = app;
+module.exports.handler = serverless(app);

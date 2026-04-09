@@ -68,9 +68,9 @@ export default function Login() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
-         <p className="mt-3 text-center">
-      Not registered? <a href="/register-patient">Register as Patient</a> | <a href="/register-doctor">Register as Doctor</a>
-    </p>
+        <p className="mt-3 text-center">
+          Not registered? <a href="/register-patient">Register as Patient</a> | <a href="/register-doctor">Register as Doctor</a>
+        </p>
       </div>
     </div>
   );

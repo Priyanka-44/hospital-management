@@ -22,35 +22,35 @@ export default function Appointments() {
   };
 
   const addAppointment = () => {
-  const patientName = prompt("Enter patient name");
-  const doctorName = prompt("Enter doctor name");
-  const doctorSpecialty = prompt("Enter doctor specialty");
-  const date = prompt("Enter date (YYYY-MM-DD)");
-  const status = prompt("Enter status (Pending/Confirmed/Cancelled)", "Pending");
-  const notes = prompt("Any notes?");
+    const patientName = prompt("Enter patient name");
+    const doctorName = prompt("Enter doctor name");
+    const doctorSpecialty = prompt("Enter doctor specialty");
+    const date = prompt("Enter date (YYYY-MM-DD)");
+    const status = prompt("Enter status (Pending/Confirmed/Cancelled)", "Pending");
+    const notes = prompt("Any notes?");
 
-  if (!patientName || !doctorName || !doctorSpecialty || !date) {
-    alert("Patient, Doctor, Specialty and Date are required!");
-    return;
-  }
+    if (!patientName || !doctorName || !doctorSpecialty || !date) {
+      alert("Patient, Doctor, Specialty and Date are required!");
+      return;
+    }
 
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-    alert("Invalid date format. Use YYYY-MM-DD");
-    return;
-  }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      alert("Invalid date format. Use YYYY-MM-DD");
+      return;
+    }
 
-  axios
-    .post("http://localhost:5001/api/appointments", {
-      patientName,
-      doctorName,
-      doctorSpecialty,
-      date: new Date(date),
-      status,
-      notes,
-    })
-    .then(() => fetchAppointments())
-    .catch((err) => alert("Failed to add appointment: " + err.message));
-};
+    axios
+      .post("http://localhost:5001/api/appointments", {
+        patientName,
+        doctorName,
+        doctorSpecialty,
+        date: new Date(date),
+        status,
+        notes,
+      })
+      .then(() => fetchAppointments())
+      .catch((err) => alert("Failed to add appointment: " + err.message));
+  };
 
 
   const editAppointment = (a) => {
